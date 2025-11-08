@@ -1,0 +1,13 @@
+{
+    "albums.csv": "Table: albums.csv\n- AlbumId (BIGINT, PRIMARY KEY)\n- Title (VARCHAR)\n- ArtistId (BIGINT, FOREIGN KEY -> artists.ArtistId)",
+    "artists.csv": "Table: artists.csv\n- ArtistId (BIGINT, PRIMARY KEY)\n- Name (VARCHAR)",
+    "customers.csv": "Table: customers.csv\n- CustomerId (BIGINT, PRIMARY KEY)\n- FirstName (VARCHAR)\n- LastName (VARCHAR)\n- Company (VARCHAR)\n- Address (VARCHAR)\n- City (VARCHAR)\n- State (VARCHAR)\n- Country (VARCHAR)\n- PostalCode (VARCHAR)\n- Phone (VARCHAR)\n- Fax (VARCHAR)\n- Email (VARCHAR)\n- SupportRepId (BIGINT, FOREIGN KEY -> employees.EmployeeId)",
+    "employees.csv": "Table: employees.csv\n- EmployeeId (BIGINT, PRIMARY KEY)\n- LastName (VARCHAR)\n- FirstName (VARCHAR)\n- Title (VARCHAR)\n- ReportsTo (BIGINT, FOREIGN KEY -> employees.EmployeeId)\n- BirthDate (TIMESTAMP)\n- HireDate (TIMESTAMP)\n- Address (VARCHAR)\n- City (VARCHAR)\n- State (VARCHAR)\n- Country (VARCHAR)\n- PostalCode (VARCHAR)\n- Phone (VARCHAR)\n- Fax (VARCHAR)\n- Email (VARCHAR)",
+    "genres.csv": "Table: genres.csv\n- GenreId (BIGINT, PRIMARY KEY)\n- Name (VARCHAR)",
+    "invoices.csv": "Table: invoices.csv\n- InvoiceId (BIGINT, PRIMARY KEY)\n- CustomerId (BIGINT, FOREIGN KEY -> customers.CustomerId)\n- InvoiceDate (TIMESTAMP)\n- BillingAddress (VARCHAR)\n- BillingCity (VARCHAR)\n- BillingState (VARCHAR)\n- BillingCountry (VARCHAR)\n- BillingPostalCode (VARCHAR)\n- Total (DOUBLE)",
+    "invoice_items.csv": "Table: invoice_items.csv\n- InvoiceLineId (BIGINT)\n- InvoiceId (BIGINT, FOREIGN KEY -> invoices.InvoiceId)\n- TrackId (BIGINT, FOREIGN KEY -> tracks.TrackId)\n- UnitPrice (DOUBLE)\n- Quantity (BIGINT)",
+    "media_types.csv": "Table: media_types.csv\n- MediaTypeId (BIGINT, PRIMARY)\n- Name (VARCHAR)",
+    "playlists.csv": "Table: playlists.csv\n- PlaylistId (BIGINT, PRIMARY KEY)\n- Name (VARCHAR)",
+    "playlist_track.csv": "Table: playlist_track.csv\n- PlaylistId (BIGINT, PRIMARY KEY)\n- TrackId (BIGINT, FOREIGN KEY -> tracks.TrackId)",
+    "tracks.csv": "Table: tracks.csv\n- TrackId (BIGINT, PRIMARY KEY)\n- Name (VARCHAR)\n- AlbumId (BIGINT, FOREIGN KEY -> albums.AlbumId)\n- MediaTypeId (BIGINT, FOREIGN KEY -> media_types.MediaTypeId)\n- GenreId (BIGINT, FOREIGN KEY -> genres.GenreId)\n- Composer (VARCHAR)\n- Milliseconds (BIGINT)\n- Bytes (BIGINT)\n- UnitPrice (DOUBLE)"
+}
