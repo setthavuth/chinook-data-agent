@@ -96,7 +96,7 @@ def get_response():
 with st.sidebar:
     st.title(f"Chat with {agent_name}")
 
-    container = st.container(height=700)
+    container = st.container(height=650)
 
     # Iterating over chat history and display chat history
     for m in st.session_state.messages:
